@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الثاني — الأهداف التعليمية | التدريب الميداني في التربية الخاصة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+:root {
+  --sky: #5B9BD4;
+  --sky-light: #EAF4FB;
+  --sky-mid: #B8D8EE;
+  --sky-dark: #2e6a9e;
+  --green: #4EAD82;
+  --green-light: #E6F5EE;
+  --green-mid: #9FD9C0;
+  --green-dark: #2d6e51;
+  --lavender: #8E7CC3;
+  --lavender-light: #F0EDF9;
+  --lavender-mid: #C8BFEA;
+  --lavender-dark: #5c4d9a;
+  --amber: #D4935A;
+  --amber-light: #FDF3E8;
+  --amber-dark: #8a5c25;
+  --coral: #D47A70;
+  --coral-light: #FCF0EE;
+  --coral-dark: #8a3e36;
+  --pink: #C97BAE;
+  --pink-light: #FAEAF5;
+  --bg: #FFFFFF;
+  --bg2: #F7F8FA;
+  --bg3: #F0F2F5;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0 2px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.10);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: var(--bg3);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.layout { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 260px; flex-shrink: 0;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  position: sticky; top: 0; height: 100vh;
+  overflow-y: auto; overflow-x: hidden;
+  display: flex; flex-direction: column;
+  z-index: 100;
+}
+
+.sidebar-logo {
+  padding: 20px 18px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-logo-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--sky), var(--lavender));
+  color: #fff; font-size: 10px; font-weight: 700;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
+  letter-spacing: .5px;
+}
+.sidebar-logo h2 { font-size: 13px; font-weight: 700; line-height: 1.5; color: var(--text); }
+.sidebar-logo p { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+.nav-section { padding: 12px 10px 4px; }
+.nav-section-title { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; padding: 0 8px 6px; }
+
+.nav-btn {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-radius: var(--radius-sm);
+  border: none; background: transparent;
+  font-family: 'Tajawal', sans-serif; font-size: 13px;
+  color: var(--muted); cursor: pointer;
+  transition: all .18s; text-align: right;
+  margin-bottom: 2px;
+}
+.nav-btn i { font-size: 17px; flex-shrink: 0; }
+.nav-btn:hover { background: var(--bg2); color: var(--text); }
+.nav-btn.active { background: var(--sky-light); color: var(--sky-dark); font-weight: 700; }
+.nav-btn .badge {
+  margin-right: auto; margin-left: 0;
+  background: var(--sky); color: #fff;
+  font-size: 9px; font-weight: 700;
+  padding: 1px 6px; border-radius: 10px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 14px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 10px; color: var(--muted);
+  text-align: center;
+}
+
+/* ===== MAIN ===== */
+.main { flex: 1; min-width: 0; overflow-x: hidden; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #4A8EC8 0%, #7B6BB5 40%, #3E9E72 100%);
+  padding: 40px 36px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 15% 60%, rgba(255,255,255,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 85% 20%, rgba(255,255,255,.09) 0%, transparent 60%);
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -1px; left: 0; right: 0; height: 40px;
+  background: var(--bg3);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.hero-inner { position: relative; z-index: 1; max-width: 700px; }
+.hero-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.2); backdrop-filter: blur(4px);
+  color: #fff; font-size: 11px; font-weight: 500;
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;
+}
+.hero h1 { color: #fff; font-size: 28px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+.hero p { color: rgba(255,255,255,.85); font-size: 14px; font-weight: 300; }
+.hero-stats {
+  display: flex; gap: 20px; margin-top: 20px;
+}
+.hero-stat { text-align: center; }
+.hero-stat-num { color: #fff; font-size: 22px; font-weight: 800; }
+.hero-stat-label { color: rgba(255,255,255,.75); font-size: 10px; margin-top: 1px; }
+
+/* CONTENT AREA */
+.content { padding: 28px 28px 60px; }
+
+/* SECTION */
+.page { display: none; }
+.page.active { display: block; }
+
+/* CARDS */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  transition: box-shadow .2s;
+}
+.card:hover { box-shadow: var(--shadow-lg); }
+
+.card-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.card-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.card-title { font-size: 15px; font-weight: 700; }
+.card-sub { font-size: 11px; color: var(--muted); margin-top: 3px; font-style: italic; }
+
+.sky { background: var(--sky-light); color: var(--sky); }
+.green { background: var(--green-light); color: var(--green); }
+.lavender { background: var(--lavender-light); color: var(--lavender); }
+.amber { background: var(--amber-light); color: var(--amber); }
+.coral { background: var(--coral-light); color: var(--coral); }
+.pink { background: var(--pink-light); color: var(--pink); }
+
+.card-body { font-size: 13px; line-height: 2.0; color: var(--text); }
+
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 12px; border-radius: 20px;
+  font-size: 11px; font-weight: 500;
+}
+.pill-sky { background: var(--sky-light); color: var(--sky-dark); }
+.pill-green { background: var(--green-light); color: var(--green-dark); }
+.pill-lavender { background: var(--lavender-light); color: var(--lavender-dark); }
+.pill-amber { background: var(--amber-light); color: var(--amber-dark); }
+.pill-coral { background: var(--coral-light); color: var(--coral-dark); }
+
+/* SECTION HEADING */
+.sec-head {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 17px; font-weight: 800; margin-bottom: 18px;
+  padding-bottom: 10px; border-bottom: 2px solid var(--border);
+}
+.sec-head i { font-size: 22px; color: var(--sky); }
+
+/* FORMULA BOX */
+.formula-box {
+  background: linear-gradient(135deg, var(--lavender-light), var(--sky-light));
+  border: 1px solid var(--lavender-mid);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px; margin: 14px 0;
+  text-align: center;
+}
+.formula-box .formula-title { font-size: 11px; color: var(--lavender-dark); font-weight: 700; margin-bottom: 8px; }
+.formula-box .formula-text { font-size: 14px; font-weight: 700; color: var(--text); line-height: 2; }
+.formula-box .formula-parts { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+
+/* ADVANTAGES GRID */
+.adv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.adv-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+.adv-item-num {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky), var(--lavender));
+  color: #fff; font-size: 11px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 6px;
+}
+.adv-item-title { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.adv-item-desc { font-size: 11px; color: var(--muted); line-height: 1.7; }
+
+/* TAXONOMY LEVELS */
+.tax-section-title {
+  font-size: 15px; font-weight: 800;
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: 0;
+}
+.tax-levels { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 16px; }
+.tax-level {
+  display: flex; align-items: stretch;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+  cursor: default;
+}
+.tax-level:last-child { border-bottom: none; }
+.tax-level:hover { background: var(--bg2); }
+.tax-level-num {
+  width: 50px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; color: #fff;
+}
+.tax-level-body { flex: 1; padding: 12px 16px; }
+.tax-level-name { font-size: 13px; font-weight: 700; }
+.tax-level-en { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+.tax-level-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.tax-level-verbs { font-size: 11px; margin-top: 6px; }
+.tax-level-verbs span {
+  display: inline-block;
+  background: rgba(0,0,0,.06);
+  padding: 1px 7px; border-radius: 10px; margin: 1px;
+  font-size: 10px;
+}
+
+/* MINDMAP */
+.mindmap-wrap { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; overflow-x: auto; box-shadow: var(--shadow); }
+.mindmap-wrap svg { max-width: 100%; }
+
+/* STANDARDS GRID */
+.std-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.std-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+.std-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.std-card-icon { font-size: 24px; margin-bottom: 8px; }
+.std-card-title { font-size: 12px; font-weight: 800; margin-bottom: 4px; }
+.std-card-items { font-size: 11px; color: var(--muted); line-height: 1.8; }
+
+/* QUESTIONS */
+.q-container { display: flex; flex-direction: column; gap: 16px; }
+.q-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.q-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+.q-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; color: #fff; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--sky), var(--lavender));
+}
+.q-text { font-size: 13px; font-weight: 600; line-height: 1.8; }
+
+.tf-row { display: flex; gap: 8px; }
+.tf-btn {
+  flex: 1; padding: 10px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--bg2);
+  font-family: 'Tajawal', sans-serif; font-size: 14px; font-weight: 700;
+  cursor: pointer; transition: all .15s;
+}
+.tf-btn:hover { border-color: var(--sky); background: var(--sky-light); }
+.tf-btn.sel { border-color: var(--sky); background: var(--sky-light); color: var(--sky-dark); }
+.tf-btn.correct { border-color: var(--green) !important; background: var(--green-light) !important; color: var(--green-dark) !important; }
+.tf-btn.wrong { border-color: var(--coral) !important; background: var(--coral-light) !important; color: var(--coral-dark) !important; }
+
+.mcq-options { display: flex; flex-direction: column; gap: 8px; }
+.mcq-opt {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--bg2);
+  cursor: pointer; font-size: 13px; transition: all .15s;
+  font-family: 'Tajawal', sans-serif; text-align: right;
+}
+.mcq-opt:hover { border-color: var(--sky); background: var(--sky-light); }
+.mcq-opt.sel { border-color: var(--sky); background: var(--sky-light); }
+.mcq-opt.correct { border-color: var(--green) !important; background: var(--green-light) !important; color: var(--green-dark) !important; }
+.mcq-opt.wrong { border-color: var(--coral) !important; background: var(--coral-light) !important; color: var(--coral-dark) !important; }
+.mcq-opt.show-correct { border-color: var(--green) !important; background: var(--green-light) !important; color: var(--green-dark) !important; }
+.mcq-bullet {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: var(--bg);
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800;
+}
+
+.check-btn {
+  width: 100%; margin-top: 12px;
+  padding: 10px; border-radius: var(--radius-sm);
+  border: 1px solid var(--sky); background: var(--sky-light);
+  color: var(--sky-dark); font-family: 'Tajawal', sans-serif;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: all .18s;
+}
+.check-btn:hover { background: var(--sky); color: #fff; }
+.check-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 600; display: none;
+  animation: fadeSlide .3s ease;
+}
+.feedback.show { display: block; }
+.feedback.ok { background: var(--green-light); color: var(--green-dark); border: 1px solid var(--green-mid); }
+.feedback.no { background: var(--coral-light); color: var(--coral-dark); border: 1px solid #f0b4ae; }
+
+@keyframes fadeSlide { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+/* ESSAY */
+.essay-diff {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 10px; font-weight: 700; margin-bottom: 10px;
+}
+.diff-easy { background: var(--green-light); color: var(--green-dark); }
+.diff-med { background: var(--amber-light); color: var(--amber-dark); }
+.diff-hard { background: var(--coral-light); color: var(--coral-dark); }
+
+.essay-q-text { font-size: 14px; font-weight: 700; line-height: 1.8; margin-bottom: 8px; }
+.essay-hint { font-size: 11px; color: var(--muted); margin-bottom: 12px; }
+.essay-hint i { color: var(--amber); }
+.model-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 16px; border-radius: var(--radius-sm);
+  border: 1px solid var(--lavender); background: var(--lavender-light);
+  color: var(--lavender-dark); font-family: 'Tajawal', sans-serif;
+  font-size: 12px; font-weight: 700; cursor: pointer; transition: all .18s;
+}
+.model-btn:hover { background: var(--lavender); color: #fff; }
+.model-answer {
+  display: none; margin-top: 12px;
+  padding: 14px 16px; background: var(--lavender-light);
+  border-radius: var(--radius-sm); border: 1px solid var(--lavender-mid);
+  font-size: 12px; line-height: 2.0; animation: fadeSlide .3s ease;
+}
+.model-answer.show { display: block; }
+
+/* SCORE DASHBOARD */
+.score-dash {
+  background: linear-gradient(135deg, var(--sky-light), var(--lavender-light));
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 20px; margin-bottom: 20px;
+}
+.score-row { display: flex; justify-content: space-between; align-items: center; }
+.score-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+.score-num { font-size: 26px; font-weight: 800; color: var(--sky-dark); }
+.progress-bar { height: 8px; background: rgba(0,0,0,.08); border-radius: 4px; margin-top: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--sky), var(--green)); border-radius: 4px; transition: width .5s ease; }
+
+/* FILTER TABS */
+.filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.filter-tab {
+  padding: 6px 14px; border-radius: 20px;
+  border: 1px solid var(--border); background: var(--bg);
+  font-family: 'Tajawal', sans-serif; font-size: 12px;
+  cursor: pointer; transition: all .15s;
+}
+.filter-tab.active { background: var(--sky); color: #fff; border-color: var(--sky); }
+.filter-tab:hover:not(.active) { background: var(--sky-light); border-color: var(--sky); }
+
+/* INFO ROW */
+.info-row { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.info-box {
+  flex: 1; min-width: 130px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.info-box-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+.info-box-val { font-size: 16px; font-weight: 800; }
+
+/* DIVIDER */
+.divider { height: 1px; background: var(--border); margin: 20px 0; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .adv-grid { grid-template-columns: 1fr; }
+  .std-grid { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 24px 20px; }
+  .content { padding: 18px 14px 50px; }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-logo-badge">🎓 التربية الخاصة</div>
+    <h2>الفصل الثاني<br>الأهداف التعليمية</h2>
+    <p>أ.د. سماح عبد الفتاح مرزوق</p>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">المحتوى</div>
+    <button class="nav-btn active" onclick="show('overview')"><i class="ti ti-book-2"></i> نظرة عامة</button>
+    <button class="nav-btn" onclick="show('behavioral')"><i class="ti ti-activity"></i> الأهداف السلوكية</button>
+    <button class="nav-btn" onclick="show('taxonomy')"><i class="ti ti-hierarchy-2"></i> تصنيفات الأهداف</button>
+    <button class="nav-btn" onclick="show('standards')"><i class="ti ti-shield-check"></i> المستويات المعيارية</button>
+    <button class="nav-btn" onclick="show('mindmap')"><i class="ti ti-chart-bubble"></i> الخريطة الذهنية</button>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">التقييم</div>
+    <button class="nav-btn" onclick="show('tf')"><i class="ti ti-checkbox"></i> صح وخطأ <span class="badge">25</span></button>
+    <button class="nav-btn" onclick="show('mcq')"><i class="ti ti-list-check"></i> اختياري <span class="badge">25</span></button>
+    <button class="nav-btn" onclick="show('essay')"><i class="ti ti-edit"></i> مقالي <span class="badge">10</span></button>
+  </div>
+
+  <div class="sidebar-footer">
+    التدريب الميداني — الفصل الثاني | 2026
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-chip"><i class="ti ti-school" style="font-size:14px"></i> التدريب الميداني في التربية الخاصة</div>
+    <h1>الفصل الثاني<br>الأهداف التعليمية</h1>
+    <p>مرجع تفاعلي شامل — يغطي كل مفاهيم وتصنيفات الفصل مع بنك أسئلة كامل</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-label">مستويات معرفية</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">5</div><div class="hero-stat-label">مستويات وجدانية</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">5</div><div class="hero-stat-label">مستويات مهارية</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">60</div><div class="hero-stat-label">سؤال تقييمي</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ===== OVERVIEW ===== -->
+<div id="page-overview" class="page active">
+  <div class="sec-head"><i class="ti ti-book-2"></i> مفاهيم الأهداف التعليمية</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon sky"><i class="ti ti-target"></i></div>
+      <div>
+        <div class="card-title">مفهوم الهدف — التعريف الجوهري</div>
+        <div class="card-sub">Objective / Goal / Aim</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>الهدف هو <strong>مصطلح عام</strong> يشير إلى القصد والطموح، وهو تعبير عن رغبات وتوقعات المخططين لأي عمل، ومقاصدهم التي يرجون الوصول إليها. وعُرِّف أيضاً بأنه: <strong>تغيير مرغوب إحداثه في سلوك فرد ما.</strong></p>
+    </div>
+    <div class="pills">
+      <span class="pill pill-sky">✦ الأهداف أول وأهم مكونات المنظومة التعليمية</span>
+      <span class="pill pill-lavender">✦ صلاح المنظومة مرتبط بدقة تحديد الأهداف</span>
+      <span class="pill pill-green">✦ الخطوة الأولى في بناء أي منهج: تحديد أهدافه</span>
+    </div>
+  </div>
+
+  <div class="adv-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon lavender"><i class="ti ti-tree"></i></div>
+        <div>
+          <div class="card-title">الأهداف التربوية</div>
+          <div class="card-sub">Educational Goals</div>
+        </div>
+      </div>
+      <div class="card-body">غايات ومقاصد ونتائج مرغوبة لأية مؤسسة أو برنامج تربوي يرجى تحقيقها. وهي أشمل وأعم من الأهداف التعليمية.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon green"><i class="ti ti-pencil"></i></div>
+        <div>
+          <div class="card-title">الأهداف التعليمية</div>
+          <div class="card-sub">Instructional Objectives</div>
+        </div>
+      </div>
+      <div class="card-body">التغيرات الإيجابية المرغوب إحداثها في سلوك المتعلمين نتيجة مرورهم بخبرات تعليمية محددة تتولاها مؤسسات التعليم.</div>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon amber"><i class="ti ti-clock"></i></div>
+      <div>
+        <div class="card-title">الأهداف قريبة وبعيدة المدى</div>
+        <div class="card-sub">Short-term vs Long-term Objectives</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:var(--sky-light);border-radius:var(--radius-sm);padding:14px;border:1px solid var(--sky-mid)">
+        <div style="font-size:12px;font-weight:800;color:var(--sky-dark);margin-bottom:6px">⏱ قريبة المدى (Short-term)</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--text)">لا تحتاج وقتاً طويلاً. مثال: <strong>الأهداف المعرفية</strong> (التذكر والفهم) — يمكن اكتساب المعلومات في موقف تعليمي واحد.</div>
+      </div>
+      <div style="background:var(--lavender-light);border-radius:var(--radius-sm);padding:14px;border:1px solid var(--lavender-mid)">
+        <div style="font-size:12px;font-weight:800;color:var(--lavender-dark);margin-bottom:6px">📅 بعيدة المدى (Long-term)</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--text)">تتطلب وقتاً طويلاً. مثال: <strong>الأهداف الوجدانية</strong> (القيم والاتجاهات) — تنميتها تحتاج مواقف تعليمية متنوعة ومتعددة.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BEHAVIORAL ===== -->
+<div id="page-behavioral" class="page">
+  <div class="sec-head"><i class="ti ti-activity"></i> الأهداف السلوكية الإجرائية</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon lavender"><i class="ti ti-lightning-bolt"></i></div>
+      <div>
+        <div class="card-title">تعريف الهدف السلوكي</div>
+        <div class="card-sub">Behavioral / Procedural Objective</div>
+      </div>
+    </div>
+    <div class="card-body">
+      هدف مصاغ صياغة إجرائية تحدد مستوى التغيير المراد إحداثه <strong>معرفياً أو مهارياً أو وجدانياً</strong> في الفرد، بحيث يظهر ذلك في سلوكه ويمكن <strong>قياسه وتقويمه.</strong>
+    </div>
+    <div class="formula-box">
+      <div class="formula-title">🔷 معادلة صياغة الهدف السلوكي الصحيح</div>
+      <div class="formula-text">أن + فعل سلوكي + المتعلم (الفرد) + المعلومة أو الخبرة + معيار (مستوى الأداء)</div>
+      <div class="formula-parts">
+        <span class="pill pill-sky">أن</span>
+        <span style="color:var(--muted);font-size:18px">+</span>
+        <span class="pill pill-lavender">فعل سلوكي قابل للقياس</span>
+        <span style="color:var(--muted);font-size:18px">+</span>
+        <span class="pill pill-green">المتعلم</span>
+        <span style="color:var(--muted);font-size:18px">+</span>
+        <span class="pill pill-amber">المعلومة / الخبرة</span>
+        <span style="color:var(--muted);font-size:18px">+</span>
+        <span class="pill pill-coral">معيار الأداء</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon green"><i class="ti ti-star"></i></div>
+      <div>
+        <div class="card-title">مزايا الأهداف السلوكية</div>
+      </div>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-item">
+        <div class="adv-item-num">1</div>
+        <div class="adv-item-title">تركز على سلوك المتعلم</div>
+        <div class="adv-item-desc">تركز على ما يفعله المتعلم لا المعلم. مثال: أن يعد وحدات من 1–10</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-item-num">2</div>
+        <div class="adv-item-title">تركز على نواتج التعلم</div>
+        <div class="adv-item-desc">تركز على الناتج لا العملية. مثال: أن يستخدم المتعلم الآلة الحاسبة بدقة</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-item-num">3</div>
+        <div class="adv-item-title">لا تصف أكثر من ناتج واحد</div>
+        <div class="adv-item-desc">كل هدف ينطوي على ناتج تعلم واحد. مثال: أن يضع عنواناً مناسباً للقصة</div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-item-num">4</div>
+        <div class="adv-item-title">تخضع للقياس والتقويم</div>
+        <div class="adv-item-desc">يمكن الحكم على تحققها. تجنب الأفعال غير قابلة للقياس كـ: يدرك، يعتقد، ينوي</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon sky"><i class="ti ti-vocabulary"></i></div>
+      <div><div class="card-title">أمثلة على الأفعال السلوكية بحسب المستوى المعرفي</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--sky-dark)">التذكر:</span>
+        <span class="pill pill-sky" style="font-size:10px">يذكر</span><span class="pill pill-sky" style="font-size:10px">يعرف</span><span class="pill pill-sky" style="font-size:10px">يتعرف على</span><span class="pill pill-sky" style="font-size:10px">يسمي</span><span class="pill pill-sky" style="font-size:10px">يكتب</span><span class="pill pill-sky" style="font-size:10px">يحدد</span><span class="pill pill-sky" style="font-size:10px">يعدد</span>
+      </div>
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--green-dark)">الفهم:</span>
+        <span class="pill pill-green" style="font-size:10px">يلخص</span><span class="pill pill-green" style="font-size:10px">يميز</span><span class="pill pill-green" style="font-size:10px">يستنتج</span><span class="pill pill-green" style="font-size:10px">يناقش</span><span class="pill pill-green" style="font-size:10px">يفسر</span><span class="pill pill-green" style="font-size:10px">يشرح</span><span class="pill pill-green" style="font-size:10px">يعلل</span>
+      </div>
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--lavender-dark)">التطبيق:</span>
+        <span class="pill pill-lavender" style="font-size:10px">يطبق</span><span class="pill pill-lavender" style="font-size:10px">يجرب</span><span class="pill pill-lavender" style="font-size:10px">يحل مسألة</span><span class="pill pill-lavender" style="font-size:10px">يجري تجربة</span>
+      </div>
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--amber-dark)">التحليل:</span>
+        <span class="pill pill-amber" style="font-size:10px">يبرهن</span><span class="pill pill-amber" style="font-size:10px">يقارن</span><span class="pill pill-amber" style="font-size:10px">يحلل</span><span class="pill pill-amber" style="font-size:10px">يجزئ</span>
+      </div>
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--coral-dark)">التركيب:</span>
+        <span class="pill pill-coral" style="font-size:10px">يصمم</span><span class="pill pill-coral" style="font-size:10px">يركب</span><span class="pill pill-coral" style="font-size:10px">يبني</span><span class="pill pill-coral" style="font-size:10px">يشيد</span>
+      </div>
+      <div style="background:var(--bg2);border-radius:var(--radius-xs);padding:10px 14px">
+        <span style="font-size:12px;font-weight:800;color:var(--pink)">التقويم:</span>
+        <span class="pill" style="background:var(--pink-light);color:var(--pink);font-size:10px">يقيّم</span><span class="pill" style="background:var(--pink-light);color:var(--pink);font-size:10px">يصدر حكماً</span><span class="pill" style="background:var(--pink-light);color:var(--pink);font-size:10px">ينقد</span><span class="pill" style="background:var(--pink-light);color:var(--pink);font-size:10px">يشخص</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAXONOMY ===== -->
+<div id="page-taxonomy" class="page">
+  <div class="sec-head"><i class="ti ti-hierarchy-2"></i> تصنيف بلوم للأهداف التعليمية</div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-body">
+      صنّف <strong>بلوم وزملاؤه</strong> الأهداف التعليمية إلى ثلاثة مجالات رئيسية تمثل جوانب النمو المختلفة في المتعلم، وهذا التصنيف قام على كم هائل من الدراسات والبحوث في مجال التربية، ويسير وفق نسق تربوي منطقي ونفسي.
+    </div>
+  </div>
+
+  <!-- COGNITIVE -->
+  <div class="tax-levels">
+    <div class="tax-section-title sky" style="color:var(--sky-dark);background:var(--sky-light)">
+      <i class="ti ti-brain" style="font-size:20px"></i> أولاً: المجال المعرفي (Cognitive Domain)
+    </div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#5B9BD4">١</div><div class="tax-level-body"><div class="tax-level-en">Knowledge / Remembering</div><div class="tax-level-name">المعرفة (التذكر)</div><div class="tax-level-desc">القدرة على تذكر المعلومات بالتعرف عليها أو استعادتها من الذاكرة. أدنى مستويات المجال المعرفي.</div><div class="tax-level-verbs"><span>يذكر</span><span>يعرف</span><span>يتعرف</span><span>يسمي</span><span>يحدد</span><span>يعدد</span></div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#4a8ec8">٢</div><div class="tax-level-body"><div class="tax-level-en">Comprehension / Understanding</div><div class="tax-level-name">الاستيعاب (الفهم)</div><div class="tax-level-desc">القدرة على إدراك المعاني وترجمة الأفكار وتفسيرها والتنبؤ بنتائجها. يشمل: الترجمة، والتفكير، والتقدير الاستقرائي.</div><div class="tax-level-verbs"><span>يلخص</span><span>يميز</span><span>يستنتج</span><span>يفسر</span><span>يشرح</span><span>يعلل</span></div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#3a7cb8">٣</div><div class="tax-level-body"><div class="tax-level-en">Application</div><div class="tax-level-name">التطبيق</div><div class="tax-level-desc">القدرة على استخدام المعلومات المجردة في حل مشكلة أو التعامل مع موقف جديد، باستخدام إجراءات وقواعد ومبادئ سبق تعلمها.</div><div class="tax-level-verbs"><span>يطبق</span><span>يجرب</span><span>يحل مسألة</span><span>يجري تجربة</span></div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#2a6aa0">٤</div><div class="tax-level-body"><div class="tax-level-en">Analysis</div><div class="tax-level-name">التحليل</div><div class="tax-level-desc">الفحص المدقق لمادة تعليمية وتجزئتها إلى عناصرها وتحديد ما بينها من علاقات وفهم بنيتها التنظيمية.</div><div class="tax-level-verbs"><span>يبرهن</span><span>يقارن</span><span>يحلل</span><span>يفك</span><span>يجزئ</span></div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#1a5888">٥</div><div class="tax-level-body"><div class="tax-level-en">Synthesis</div><div class="tax-level-name">التركيب</div><div class="tax-level-desc">عكس التحليل — القدرة على تجميع الأجزاء لتكوين كل متكامل ذي معنى، وإنتاج أفكار ابتكارية جديدة كالقصص والفروض والخطط.</div><div class="tax-level-verbs"><span>يصمم</span><span>يركب</span><span>يجمع</span><span>يبني</span><span>يشيد</span></div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#0d4070">٦</div><div class="tax-level-body"><div class="tax-level-en">Evaluation</div><div class="tax-level-name">التقويم</div><div class="tax-level-desc">القدرة على إصدار حكم على موضوع ما، مثل الحكم على شخصيات القصة أو على حل لمشكلة معينة. أعلى مستويات المجال المعرفي.</div><div class="tax-level-verbs"><span>يقيّم</span><span>يصدر حكماً</span><span>ينقد</span><span>يشخص</span></div></div></div>
+  </div>
+
+  <!-- AFFECTIVE (Krathwohl) -->
+  <div class="tax-levels">
+    <div class="tax-section-title lavender" style="color:var(--lavender-dark);background:var(--lavender-light)">
+      <i class="ti ti-heart" style="font-size:20px"></i> ثانياً: المجال الوجداني — تصنيف كراثوهل (Krathwohl)
+    </div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#8E7CC3">١</div><div class="tax-level-body"><div class="tax-level-en">Receiving</div><div class="tax-level-name">الاستقبال</div><div class="tax-level-desc">استعداد المتعلم للاهتمام بظاهرة معينة والانتباه لها. أقل مستويات النواتج الوجدانية.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#7d6ab0">٢</div><div class="tax-level-body"><div class="tax-level-en">Responding</div><div class="tax-level-name">الاستجابة</div><div class="tax-level-desc">المشاركة الإيجابية من جانب المتعلم والتفاعل مع الموقف. يتضمن الأهداف المرتبطة بالميول.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#6b589e">٣</div><div class="tax-level-body"><div class="tax-level-en">Valuing</div><div class="tax-level-name">التقييم (إعطاء القيمة)</div><div class="tax-level-desc">القيمة التي يعطيها المتعلم لشيء معين، من التقبل البسيط إلى الالتزام العميق. يتعلق بالاتجاهات وأوجه التقدير.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#59468a">٤</div><div class="tax-level-body"><div class="tax-level-en">Organization</div><div class="tax-level-name">التنظيم القيمي</div><div class="tax-level-desc">الجمع بين أكثر من قيمة وحل التناقضات بينها وبناء نظام قيمي ذي اتساق داخلي. يشمل الأهداف التي تتناول فلسفة في الحياة.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#473474">٥</div><div class="tax-level-body"><div class="tax-level-en">Characterization by Value</div><div class="tax-level-name">التميز بنظام قيمي مركب</div><div class="tax-level-desc">تكوّن نظام قيمي مركب يضبط سلوك الفرد ويوجهه لفترة طويلة، ويؤدي إلى أسلوب حياة مميز. السلوك ممتد وشامل وثابت.</div></div></div>
+  </div>
+
+  <!-- PSYCHOMOTOR -->
+  <div class="tax-levels">
+    <div class="tax-section-title green" style="color:var(--green-dark);background:var(--green-light)">
+      <i class="ti ti-run" style="font-size:20px"></i> ثالثاً: المجال النفسحركي المهاري (Psychomotor Domain)
+    </div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#4EAD82">١</div><div class="tax-level-body"><div class="tax-level-en">Imitation</div><div class="tax-level-name">التقليد / المحاكاة</div><div class="tax-level-desc">قدرة المتعلم على محاكاة الحركات والأداءات كما يفعلها المعلم أو أي شخص لديه المهارة.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#3e9a72">٤</div><div class="tax-level-body"><div class="tax-level-en">Performance / Manipulation</div><div class="tax-level-name">الممارسة</div><div class="tax-level-desc">إداء الحركات والأنشطة وفق توجيهات وتعليمات محددة، تحت إشراف وتوجيه المعلم.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#2e8760">٣</div><div class="tax-level-body"><div class="tax-level-en">Precision</div><div class="tax-level-name">الأداء بدقة</div><div class="tax-level-desc">التنسيق الحسي والحركي مع زيادة السرعة دون أخطاء. الأداء يصبح آلياً أتوماتيكياً دون حاجة لتوجيه.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#1e744e">٤</div><div class="tax-level-body"><div class="tax-level-en">Articulation</div><div class="tax-level-name">الأداء المميز</div><div class="tax-level-desc">أرقى المستويات — تجاوز حد الإتقان، بأداء المهارة بخطوات أقل أو بطرق مبتكرة، مما يزيد الدقة والسرعة.</div></div></div>
+    <div class="tax-level"><div class="tax-level-num" style="background:#0e613e">٥</div><div class="tax-level-body"><div class="tax-level-en">Naturalization</div><div class="tax-level-name">الأداء الطبيعي</div><div class="tax-level-desc">مستوى رفيع من الأداء المهاري، يكون بعيداً عن التعقيد وشبه طبيعي تماماً.</div></div></div>
+  </div>
+</div>
+
+<!-- ===== STANDARDS ===== -->
+<div id="page-standards" class="page">
+  <div class="sec-head"><i class="ti ti-shield-check"></i> المستويات المعيارية للأهداف التعليمية</div>
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-body">يجب وضع مجموعة من المعايير لكل مكون في منظومة المنهج لبنائه والحكم على جودته. وفيما يلي المستويات المعيارية الستة للأهداف التعليمية:</div>
+  </div>
+  <div class="std-grid">
+    <div class="std-card">
+      <div class="std-card-icon sky" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px"><i class="ti ti-link" style="color:var(--sky)"></i></div>
+      <div class="std-card-title" style="color:var(--sky-dark)">١. اتساق الأهداف</div>
+      <div class="std-card-items">
+        • تتسق مع الفلسفة التربوية<br>
+        • تتلاءم مع الثقافة المجتمعية<br>
+        • تنسجم مع ممارسات التدريس<br>
+        • تتوافق مع عمليات التقويم<br>
+        • تتناغم فلسفياً مع القيم الفردية والاجتماعية
+      </div>
+    </div>
+    <div class="std-card">
+      <div class="std-card-icon lavender" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px"><i class="ti ti-maximize" style="color:var(--lavender)"></i></div>
+      <div class="std-card-title" style="color:var(--lavender-dark)">٢. شمول الأهداف واتساعها</div>
+      <div class="std-card-items">
+        • تشمل جميع جوانب نمو المتعلم<br>
+        • تؤكد النمو المعرفي والوجداني والجسمي<br>
+        • تساير المستويات العالمية<br>
+        • تتنوع بين العمومية والخصوصية<br>
+        • تستجيب لمتطلبات المجتمع
+      </div>
+    </div>
+    <div class="std-card">
+      <div class="std-card-icon green" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px"><i class="ti ti-adjustments" style="color:var(--green)"></i></div>
+      <div class="std-card-title" style="color:var(--green-dark)">٣. ملاءمة الأهداف</div>
+      <div class="std-card-items">
+        • مناسبة للمتعلمين حسب مستوياتهم النمائية<br>
+        • تتلاءم مع الزمن المتاح للخبرات التعليمية<br>
+        • تراعي الفروق الفردية بين المتعلمين
+      </div>
+    </div>
+    <div class="std-card">
+      <div class="std-card-icon amber" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px"><i class="ti ti-check-circle" style="color:var(--amber)"></i></div>
+      <div class="std-card-title" style="color:var(--amber-dark)">٤. قابلية التحقق</div>
+      <div class="std-card-items">
+        • واقعية يمكن تحقيقها<br>
+        • تهتم بعمليات التعلم النمائي<br>
+        • وسيلة للتعرف على مدى تعلم المتعلمين<br>
+        • تراعي الإمكانات المادية والبشرية
+      </div>
+    </div>
+    <div class="std-card">
+      <div class="std-card-icon coral" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px"><i class="ti ti-medal" style="color:var(--coral)"></i></div>
+      <div class="std-card-title" style="color:var(--coral-dark)">٥. صدق الأهداف</div>
+      <div class="std-card-items">
+        • تعكس أبعاد المواقف التعليمية<br>
+        • ذات قيمة تربوية لحاضر المتعلم ومستقبله<br>
+        • تدعم الهوية الثقافية الوطنية والعربية<br>
+        • تدعم البعد الأخلاقي والنسق القيمي<br>
+        • تدعم الديمقراطية واحترام الرأي الآخر
+      </div>
+    </div>
+    <div class="std-card">
+      <div class="std-card-icon sky" style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px;background:var(--pink-light)"><i class="ti ti-focus-2" style="color:var(--pink)"></i></div>
+      <div class="std-card-title" style="color:var(--pink)">٦. تحديد الأهداف</div>
+      <div class="std-card-items">
+        • محددة وواضحة<br>
+        • دقيقة<br>
+        • مرنة
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MINDMAP ===== -->
+<div id="page-mindmap" class="page">
+  <div class="sec-head"><i class="ti ti-chart-bubble"></i> الخريطة الذهنية — الفصل الثاني</div>
+  <div class="mindmap-wrap">
+    <svg viewBox="0 0 900 620" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Tajawal, sans-serif">
+      <!-- CENTER -->
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+        </marker>
+      </defs>
+
+      <!-- Center node -->
+      <ellipse cx="450" cy="310" rx="80" ry="46" fill="#5B9BD4" opacity=".9"/>
+      <text x="450" y="304" text-anchor="middle" fill="#fff" font-size="13" font-weight="800">الأهداف</text>
+      <text x="450" y="322" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">التعليمية</text>
+
+      <!-- Branch 1: Cognitive -->
+      <line x1="370" y1="292" x2="230" y2="180" stroke="#5B9BD4" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="100" y="140" width="145" height="44" rx="10" fill="#EAF4FB" stroke="#B8D8EE"/>
+      <text x="172" y="159" text-anchor="middle" fill="#2e6a9e" font-size="12" font-weight="800">المجال المعرفي</text>
+      <text x="172" y="176" text-anchor="middle" fill="#2e6a9e" font-size="10">بلوم — 6 مستويات</text>
+
+      <!-- Cognitive sub-nodes -->
+      <line x1="100" y1="162" x2="60" y2="100" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="8" y="82" width="60" height="24" rx="6" fill="#B8D8EE"/>
+      <text x="38" y="98" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">التذكر</text>
+
+      <line x1="100" y1="155" x2="30" y2="140" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="-8" y="128" width="50" height="22" rx="5" fill="#B8D8EE"/>
+      <text x="17" y="143" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">الفهم</text>
+
+      <line x1="100" y1="165" x2="24" y2="178" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="-8" y="167" width="50" height="22" rx="5" fill="#B8D8EE"/>
+      <text x="17" y="182" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">التطبيق</text>
+
+      <line x1="120" y1="184" x2="30" y2="216" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="-8" y="206" width="50" height="22" rx="5" fill="#B8D8EE"/>
+      <text x="17" y="221" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">التحليل</text>
+
+      <line x1="130" y1="184" x2="36" y2="250" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="-8" y="240" width="54" height="22" rx="5" fill="#B8D8EE"/>
+      <text x="19" y="255" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">التركيب</text>
+
+      <line x1="150" y1="184" x2="52" y2="284" stroke="#5B9BD4" stroke-width="1" opacity=".4"/>
+      <rect x="2" y="274" width="54" height="22" rx="5" fill="#B8D8EE"/>
+      <text x="29" y="289" text-anchor="middle" fill="#1a4a7a" font-size="9" font-weight="700">التقويم</text>
+
+      <!-- Branch 2: Affective -->
+      <line x1="370" y1="326" x2="215" y2="410" stroke="#8E7CC3" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="96" y="388" width="145" height="44" rx="10" fill="#F0EDF9" stroke="#C8BFEA"/>
+      <text x="168" y="407" text-anchor="middle" fill="#5c4d9a" font-size="12" font-weight="800">المجال الوجداني</text>
+      <text x="168" y="424" text-anchor="middle" fill="#5c4d9a" font-size="10">كراثوهل — 5 مستويات</text>
+
+      <!-- Affective subs -->
+      <line x1="96" y1="406" x2="26" y2="356" stroke="#8E7CC3" stroke-width="1" opacity=".4"/>
+      <rect x="-10" y="344" width="50" height="22" rx="5" fill="#C8BFEA"/>
+      <text x="15" y="359" text-anchor="middle" fill="#3a2c7a" font-size="9" font-weight="700">الاستقبال</text>
+
+      <line x1="96" y1="412" x2="14" y2="398" stroke="#8E7CC3" stroke-width="1" opacity=".4"/>
+      <rect x="-14" y="387" width="54" height="22" rx="5" fill="#C8BFEA"/>
+      <text x="13" y="402" text-anchor="middle" fill="#3a2c7a" font-size="9" font-weight="700">الاستجابة</text>
+
+      <line x1="96" y1="418" x2="8" y2="436" stroke="#8E7CC3" stroke-width="1" opacity=".4"/>
+      <rect x="-18" y="426" width="50" height="22" rx="5" fill="#C8BFEA"/>
+      <text x="7" y="441" text-anchor="middle" fill="#3a2c7a" font-size="9" font-weight="700">التقييم</text>
+
+      <line x1="110" y1="432" x2="30" y2="468" stroke="#8E7CC3" stroke-width="1" opacity=".4"/>
+      <rect x="-6" y="458" width="52" height="22" rx="5" fill="#C8BFEA"/>
+      <text x="20" y="473" text-anchor="middle" fill="#3a2c7a" font-size="9" font-weight="700">التنظيم</text>
+
+      <line x1="126" y1="432" x2="58" y2="496" stroke="#8E7CC3" stroke-width="1" opacity=".4"/>
+      <rect x="8" y="486" width="58" height="22" rx="5" fill="#C8BFEA"/>
+      <text x="37" y="501" text-anchor="middle" fill="#3a2c7a" font-size="9" font-weight="700">التميز القيمي</text>
+
+      <!-- Branch 3: Psychomotor -->
+      <line x1="530" y1="310" x2="690" y2="200" stroke="#4EAD82" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="660" y="166" width="150" height="44" rx="10" fill="#E6F5EE" stroke="#9FD9C0"/>
+      <text x="735" y="185" text-anchor="middle" fill="#2d6e51" font-size="12" font-weight="800">المجال المهاري</text>
+      <text x="735" y="202" text-anchor="middle" fill="#2d6e51" font-size="10">5 مستويات</text>
+
+      <line x1="810" y1="185" x2="860" y2="140" stroke="#4EAD82" stroke-width="1" opacity=".4"/>
+      <rect x="846" y="126" width="54" height="22" rx="5" fill="#9FD9C0"/>
+      <text x="873" y="141" text-anchor="middle" fill="#1a4a32" font-size="9" font-weight="700">المحاكاة</text>
+
+      <line x1="810" y1="190" x2="870" y2="172" stroke="#4EAD82" stroke-width="1" opacity=".4"/>
+      <rect x="856" y="161" width="52" height="22" rx="5" fill="#9FD9C0"/>
+      <text x="882" y="176" text-anchor="middle" fill="#1a4a32" font-size="9" font-weight="700">الممارسة</text>
+
+      <line x1="810" y1="200" x2="872" y2="210" stroke="#4EAD82" stroke-width="1" opacity=".4"/>
+      <rect x="854" y="200" width="58" height="22" rx="5" fill="#9FD9C0"/>
+      <text x="883" y="215" text-anchor="middle" fill="#1a4a32" font-size="9" font-weight="700">الأداء بدقة</text>
+
+      <line x1="810" y1="208" x2="862" y2="240" stroke="#4EAD82" stroke-width="1" opacity=".4"/>
+      <rect x="842" y="230" width="64" height="22" rx="5" fill="#9FD9C0"/>
+      <text x="874" y="245" text-anchor="middle" fill="#1a4a32" font-size="9" font-weight="700">الأداء المميز</text>
+
+      <line x1="810" y1="210" x2="852" y2="270" stroke="#4EAD82" stroke-width="1" opacity=".4"/>
+      <rect x="824" y="262" width="68" height="22" rx="5" fill="#9FD9C0"/>
+      <text x="858" y="277" text-anchor="middle" fill="#1a4a32" font-size="9" font-weight="700">الأداء الطبيعي</text>
+
+      <!-- Branch 4: Behavioral -->
+      <line x1="530" y1="330" x2="672" y2="400" stroke="#D4935A" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="660" y="378" width="155" height="44" rx="10" fill="#FDF3E8" stroke="#f5c8a0"/>
+      <text x="737" y="397" text-anchor="middle" fill="#8a5c25" font-size="12" font-weight="800">الأهداف السلوكية</text>
+      <text x="737" y="414" text-anchor="middle" fill="#8a5c25" font-size="10">معادلة الصياغة الصحيحة</text>
+
+      <line x1="815" y1="400" x2="860" y2="360" stroke="#D4935A" stroke-width="1" opacity=".4"/>
+      <rect x="840" y="346" width="54" height="22" rx="5" fill="#f5c8a0"/>
+      <text x="867" y="361" text-anchor="middle" fill="#5a3210" font-size="9" font-weight="700">فعل سلوكي</text>
+
+      <line x1="815" y1="407" x2="862" y2="434" stroke="#D4935A" stroke-width="1" opacity=".4"/>
+      <rect x="840" y="424" width="58" height="22" rx="5" fill="#f5c8a0"/>
+      <text x="869" y="439" text-anchor="middle" fill="#5a3210" font-size="9" font-weight="700">قابل للقياس</text>
+
+      <!-- Branch 5: Standards -->
+      <line x1="452" y1="356" x2="450" y2="492" stroke="#D47A70" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="360" y="490" width="180" height="44" rx="10" fill="#FCF0EE" stroke="#f0b4ae"/>
+      <text x="450" y="509" text-anchor="middle" fill="#8a3e36" font-size="12" font-weight="800">المعايير الستة</text>
+      <text x="450" y="526" text-anchor="middle" fill="#8a3e36" font-size="10">اتساق، شمول، ملاءمة، تحقق، صدق، تحديد</text>
+
+      <!-- Branch 6: Time -->
+      <line x1="440" y1="264" x2="440" y2="132" stroke="#C97BAE" stroke-width="2" marker-end="url(#arr)" opacity=".6"/>
+      <rect x="360" y="90" width="160" height="44" rx="10" fill="#FAEAF5" stroke="#e0b8d4"/>
+      <text x="440" y="109" text-anchor="middle" fill="#8a3e5a" font-size="12" font-weight="800">الأهداف زمنياً</text>
+      <text x="440" y="126" text-anchor="middle" fill="#8a3e5a" font-size="10">قريبة المدى / بعيدة المدى</text>
+    </svg>
+  </div>
+  <div style="margin-top:12px;font-size:11px;color:var(--muted);text-align:center">خريطة ذهنية تفاعلية — الفصل الثاني: الأهداف التعليمية وتصنيفاتها</div>
+</div>
+
+<!-- ===== TRUE/FALSE ===== -->
+<div id="page-tf" class="page">
+  <div class="sec-head"><i class="ti ti-checkbox"></i> أسئلة صح وخطأ (25 سؤالاً)</div>
+  <div class="score-dash">
+    <div class="score-row"><span class="score-label">درجتك الحالية</span><span class="score-num" id="tf-score">0 / 25</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="tf-progress" style="width:0%"></div></div>
+  </div>
+  <div class="q-container" id="tf-container"></div>
+</div>
+
+<!-- ===== MCQ ===== -->
+<div id="page-mcq" class="page">
+  <div class="sec-head"><i class="ti ti-list-check"></i> أسئلة الاختيار من متعدد (25 سؤالاً)</div>
+  <div class="score-dash">
+    <div class="score-row"><span class="score-label">درجتك الحالية</span><span class="score-num" id="mcq-score">0 / 25</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="mcq-progress" style="width:0%"></div></div>
+  </div>
+  <div class="q-container" id="mcq-container"></div>
+</div>
+
+<!-- ===== ESSAY ===== -->
+<div id="page-essay" class="page">
+  <div class="sec-head"><i class="ti ti-edit"></i> أسئلة مقالية متدرجة الصعوبة (10 أسئلة)</div>
+  <div id="essay-container"></div>
+</div>
+
+</div><!-- /content -->
+</main>
+</div><!-- /layout -->
+
+<script>
+// ===== NAVIGATION =====
+function show(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ===== TRUE/FALSE DATA =====
+const tfData = [
+  { q: "الأهداف تمثل أول وأهم مكونات المنظومة التعليمية.", ans: true },
+  { q: "الهدف التعليمي هو نفسه الهدف التربوي دون أي فرق بينهما.", ans: false, exp: "الهدف التربوي أعم وأشمل، بينما الهدف التعليمي يختص بالتغيرات في سلوك المتعلم نتيجة خبرات تعليمية محددة." },
+  { q: "الهدف السلوكي يجب أن يكون قابلاً للقياس والتقويم.", ans: true },
+  { q: "الفعل 'يدرك' يُعدّ مثالاً جيداً على الأفعال السلوكية القابلة للقياس.", ans: false, exp: "'يدرك' فعل غير سلوكي لأنه لا يظهر مباشرة في سلوك المتعلم، مما يجعل قياسه صعباً." },
+  { q: "معادلة الهدف السلوكي تتكون من: أن + فعل سلوكي + المتعلم + المعلومة + معيار الأداء.", ans: true },
+  { q: "الأهداف الوجدانية تُعدّ من الأهداف قريبة المدى لأنها سهلة التحقق.", ans: false, exp: "الأهداف الوجدانية كالاتجاهات والقيم أهداف بعيدة المدى تتطلب وقتاً طويلاً لتحقيقها." },
+  { q: "قام تصنيف بلوم على دراسات وبحوث واسعة في مجال التربية.", ans: true },
+  { q: "يشمل المجال المعرفي عند بلوم أربعة مستويات فقط.", ans: false, exp: "المجال المعرفي يشمل ستة مستويات: التذكر، الفهم، التطبيق، التحليل، التركيب، التقويم." },
+  { q: "التذكر هو أدنى مستويات المجال المعرفي.", ans: true },
+  { q: "التقويم هو أعلى مستويات المجال المعرفي في تصنيف بلوم.", ans: true },
+  { q: "المجال الوجداني وضع تصنيفه العالم بلوم وحده.", ans: false, exp: "المجال الوجداني صنّفه كراثوهل (Krathwohl) وزملاؤه وليس بلوم." },
+  { q: "يتضمن المجال الوجداني عند كراثوهل خمسة مستويات.", ans: true },
+  { q: "الاستقبال هو أقل مستويات النواتج الوجدانية.", ans: true },
+  { q: "التنظيم القيمي يعني قبول قيمة واحدة فقط دون حل التناقضات.", ans: false, exp: "التنظيم القيمي يعني الجمع بين أكثر من قيمة وحل التناقضات بينها وبناء نظام قيمي متسق." },
+  { q: "المجال النفسحركي المهاري يتعلق بجوانب النمو العاطفية.", ans: false, exp: "المجال النفسحركي يتعلق بجوانب النمو الحركية التي تتطلب تآزراً حسياً وحركياً." },
+  { q: "التقليد أو المحاكاة هو أول مستويات المجال النفسحركي.", ans: true },
+  { q: "الأداء المميز هو أرقى مستويات الأهداف في الجانب المهاري.", ans: true },
+  { q: "تحقيق أهداف الأنشطة اليومية لا يؤدي إلى تحقيق أهداف البرامج.", ans: false, exp: "تحقيق أهداف الأنشطة اليومية يؤدي إلى تحقيق أهداف البرامج، وهكذا في تسلسل هرمي." },
+  { q: "يجب أن تتسق أهداف التعلم مع متطلبات الفلسفة التربوية العامة.", ans: true },
+  { q: "الأهداف التعليمية يجب أن تراعي الفروق الفردية بين المتعلمين.", ans: true },
+  { q: "من شروط الأهداف التعليمية الجيدة أن تكون مرنة وواضحة ودقيقة.", ans: true },
+  { q: "يُعدّ 'يصمم' مثالاً على الأفعال السلوكية في مستوى التذكر.", ans: false, exp: "'يصمم' فعل يدل على مستوى التركيب، وليس التذكر." },
+  { q: "الأهداف السلوكية تركز على عمليات التعلم أكثر من تركيزها على نواتجها.", ans: false, exp: "الأهداف السلوكية تركز على نواتج التعلم أكثر من العمليات." },
+  { q: "يجب أن تدعم الأهداف التعليمية الهوية الثقافية الوطنية والعربية.", ans: true },
+  { q: "الأهداف التعليمية الجيدة تصف أكثر من ناتج تعليمي في صياغة واحدة.", ans: false, exp: "الأهداف السلوكية يجب ألا تصف أكثر من ناتج تعليمي واحد." }
+];
+
+// ===== MCQ DATA =====
+const mcqData = [
+  { q: "من وضع تصنيف الأهداف التعليمية في المجال الوجداني؟", opts: ["بلوم وزملاؤه","كراثوهل وزملاؤه","سكينر وثورندايك","جانييه وبريجز"], ans: 1 },
+  { q: "ما عدد مستويات المجال المعرفي في تصنيف بلوم؟", opts: ["أربعة مستويات","خمسة مستويات","ستة مستويات","سبعة مستويات"], ans: 2 },
+  { q: "أيٌّ من الأفعال التالية يناسب مستوى التركيب في المجال المعرفي؟", opts: ["يذكر","يحلل","يصمم","يقارن"], ans: 2 },
+  { q: "الهدف الذي يتطلب وقتاً طويلاً لتحقيقه يُسمى:", opts: ["هدفاً قريب المدى","هدفاً بعيد المدى","هدفاً سلوكياً","هدفاً وجدانياً"], ans: 1 },
+  { q: "أي المستويات التالية هو الأعلى في المجال المعرفي عند بلوم؟", opts: ["التحليل","التطبيق","التركيب","التقويم"], ans: 3 },
+  { q: "ما المستوى الوجداني الذي تتكون فيه لدى الفرد فلسفة خاصة في الحياة؟", opts: ["الاستقبال","الاستجابة","التنظيم","التميز بنظام قيمي مركب"], ans: 3 },
+  { q: "أي الأفعال التالية يُعدّ فعلاً سلوكياً غير قابل للقياس؟", opts: ["يعدد","ينوي","يكتب","يرسم"], ans: 1 },
+  { q: "مستوى الاستقبال في المجال الوجداني يعني:", opts: ["المشاركة الإيجابية الكاملة","إعطاء القيمة للأشياء","الاستعداد للاهتمام بظاهرة معينة","بناء نظام قيمي متكامل"], ans: 2 },
+  { q: "ما أول مستوى في المجال النفسحركي المهاري؟", opts: ["الأداء بدقة","الممارسة","التقليد والمحاكاة","الأداء المميز"], ans: 2 },
+  { q: "صياغة الهدف السلوكي الصحيحة تبدأ دائماً بـ:", opts: ["أن + فعل غير سلوكي","أن + فعل سلوكي","فعل سلوكي + أن","أن + اسم"], ans: 1 },
+  { q: "التطبيق في المجال المعرفي يعني:", opts: ["تذكر المعلومات فقط","فهم الأفكار وترجمتها","استخدام المعلومات في حل مشكلة جديدة","إصدار حكم على موضوع"], ans: 2 },
+  { q: "أيٌّ من المستويات المعيارية التالية يتعلق بمناسبة الأهداف للمتعلمين؟", opts: ["اتساق الأهداف","شمول الأهداف","ملاءمة الأهداف","صدق الأهداف"], ans: 2 },
+  { q: "الأداء الطبيعي في المجال المهاري يتميز بأنه:", opts: ["يتطلب توجيهاً مستمراً","يكون مبتكراً دائماً","يكون بعيداً عن التعقيد وشبه طبيعي","يحتاج إلى إشراف دائم"], ans: 2 },
+  { q: "التحليل في تصنيف بلوم يعني:", opts: ["تجميع الأجزاء لتكوين كل متكامل","فحص المادة وتجزئتها إلى عناصرها","إصدار حكم على موضوع","ترجمة الأفكار إلى صور أخرى"], ans: 1 },
+  { q: "أي من التالي مثال على هدف بعيد المدى؟", opts: ["حفظ جدول الضرب","تعريف مفهوم الديمقراطية","تنمية قيمة احترام الآخرين","كتابة اسم الطالب"], ans: 2 },
+  { q: "المستوى الأعلى في المجال الوجداني عند كراثوهل هو:", opts: ["الاستقبال","الاستجابة","التنظيم","التميز بنظام قيمي مركب"], ans: 3 },
+  { q: "الفعل 'يلخص' يناسب مستوى:", opts: ["التذكر","الفهم","التطبيق","التحليل"], ans: 1 },
+  { q: "ما المقصود بـ 'صدق الأهداف' كمعيار؟", opts: ["أن تكون قابلة للقياس","أن تعكس أبعاد المواقف التعليمية وتكون ذات قيمة تربوية","أن تكون متسقة مع المنهج","أن تكون شاملة لكل الجوانب"], ans: 1 },
+  { q: "أيٌّ من التالي فعل سلوكي مناسب لمستوى التقويم؟", opts: ["يذكر","يطبق","ينقد","يصمم"], ans: 2 },
+  { q: "الأهداف التعليمية في المجال المعرفي تتعامل مع:", opts: ["الميول والاتجاهات","الحركات والأداءات","عمليات التعرف على المعلومات واسترجاعها","القيم والمشاعر"], ans: 2 },
+  { q: "ما عدد المستويات المعيارية للأهداف التعليمية المذكورة في الفصل؟", opts: ["أربعة","خمسة","ستة","سبعة"], ans: 2 },
+  { q: "مستوى 'التقييم' في المجال الوجداني يتعلق بـ:", opts: ["مجرد الانتباه لظاهرة","القيمة التي يعطيها المتعلم لشيء معين","المشاركة الإيجابية","بناء نظام قيمي متكامل"], ans: 1 },
+  { q: "الهدف السلوكي يجب ألا يصف:", opts: ["ناتج تعليمي واحد","سلوك المتعلم","أكثر من ناتج تعليمي في صياغة واحدة","تغيراً إيجابياً"], ans: 2 },
+  { q: "التركيب في تصنيف بلوم هو عكس:", opts: ["التذكر","التطبيق","التحليل","التقويم"], ans: 2 },
+  { q: "أيٌّ من التالي يمثل معياراً صحيحاً للأهداف التعليمية الجيدة؟", opts: ["أن تكون ثابتة لا تتغير","أن تكون مرنة وواضحة ودقيقة","أن تُركّز على المعلم لا المتعلم","أن تكون نظرية بحتة"], ans: 1 }
+];
+
+// ===== ESSAY DATA =====
+const essayData = [
+  { diff: "easy", q: "عرّف الهدف التعليمي وفرّق بينه وبين الهدف التربوي.", hint: "اذكر تعريف كلٍّ منهما مع إبراز الفرق في النطاق والعمومية.", model: "الهدف التعليمي (Instructional Objective) هو التغيرات الإيجابية المرغوب إحداثها في سلوك المتعلمين نتيجة مرورهم بخبرات تعليمية محددة تتولاها مؤسسات التعليم. أما الهدف التربوي (Educational Goal) فهو غايات ومقاصد ونتائج مرغوبة لأية مؤسسة أو برنامج تربوي. الفرق: الهدف التربوي أعم وأشمل ويمثل الغايات الكبرى، بينما الهدف التعليمي أكثر تحديداً ويرتبط بالسلوك القابل للملاحظة والقياس." },
+  { diff: "easy", q: "اذكر معادلة صياغة الهدف السلوكي مع مثال تطبيقي من مجال التربية الخاصة.", hint: "استخدم العناصر الخمسة للمعادلة وطبقها على حالة طالب من ذوي الاحتياجات الخاصة.", model: "المعادلة: أن + فعل سلوكي + المتعلم + المعلومة أو الخبرة + معيار الأداء. مثال: 'أن يُشير الطالب ذو اضطراب طيف التوحد إلى الصورة المطابقة للكلمة من بين ثلاث صور بنسبة دقة 80% في ثلاث جلسات متتالية.' هنا: فعل سلوكي = يُشير، المتعلم = الطالب ذو اضطراب طيف التوحد، المعلومة = الصورة المطابقة للكلمة، المعيار = 80% في ثلاث جلسات." },
+  { diff: "easy", q: "ما الفرق بين الأهداف قريبة المدى وبعيدة المدى؟ اذكر مثالاً لكل منهما.", hint: "ركّز على عامل الوقت وطبيعة المحتوى في كل نوع.", model: "الأهداف قريبة المدى (Short-term Objectives): هي التي لا تحتاج وقتاً طويلاً لتحقيقها، ومثالها الأهداف المعرفية كالتذكر والفهم؛ إذ يمكن للمتعلم اكتساب معلومات في موقف تعليمي واحد. أما الأهداف بعيدة المدى (Long-term Objectives): فهي المقاصد التي تستغرق وقتاً طويلاً، ومثالها الأهداف الوجدانية كتنمية قيمة احترام الآخرين أو الاتجاه الإيجابي نحو التعلم، لأنها تحتاج مواقف تعليمية متنوعة ومتعددة على مدى طويل." },
+  { diff: "medium", q: "اشرح تصنيف بلوم للمجال المعرفي مبيناً المستويات الست مع ذكر فعل سلوكي لكل مستوى.", hint: "رتّب المستويات من الأدنى للأعلى مع الأفعال المناسبة.", model: "يضم المجال المعرفي ستة مستويات متدرجة: (1) التذكر: أدنى المستويات، يتضمن استرجاع المعلومات — فعل: يذكر. (2) الفهم: إدراك المعاني وتفسير الأفكار — فعل: يشرح. (3) التطبيق: استخدام المعلومات في مواقف جديدة — فعل: يطبق. (4) التحليل: تجزئة المادة إلى عناصرها وفهم علاقاتها — فعل: يحلل. (5) التركيب: تجميع الأجزاء لتكوين كل جديد — فعل: يصمم. (6) التقويم: إصدار أحكام على موضوعات — فعل: ينقد." },
+  { diff: "medium", q: "وضّح تصنيف كراثوهل للمجال الوجداني مع ذكر أمثلة مرتبطة بمجال التربية الخاصة.", hint: "اربط كل مستوى بسلوك ملموس في سياق ذوي الاحتياجات الخاصة.", model: "وضع كراثوهل خمسة مستويات للمجال الوجداني: (1) الاستقبال: انتباه المتعلم ذي الإعاقة لنشاط جديد في الفصل. (2) الاستجابة: مشاركته الإيجابية في النشاط رغم صعوبة تنفيذه. (3) التقييم: تقدير أهمية التعاون مع زملائه ورغبته في ذلك. (4) التنظيم: تنظيم قيمة التعاون مع قيم أخرى كاحترام الفروق الفردية ضمن منظومة متسقة. (5) التميز بنظام قيمي: أن يُصبح احترام الآخرين أسلوب حياة راسخاً يضبط سلوكه باستمرار." },
+  { diff: "medium", q: "ما أهمية الأهداف السلوكية وما مزاياها مقارنةً بالأهداف العامة؟", hint: "ناقش أربعة مزايا على الأقل مع أمثلة.", model: "تمتاز الأهداف السلوكية بأربع مزايا رئيسية: (1) تركز على سلوك المتعلم لا المعلم، مما يجعل محور العملية التعليمية المتعلم نفسه. (2) تركز على نواتج التعلم وليس العمليات، فتحدد ما يجب أن يكون عليه المتعلم بعد انتهاء الموقف التعليمي. (3) لا تصف أكثر من ناتج تعليمي واحد في صياغة واحدة، مما يجعلها دقيقة ومحددة. (4) تخضع للقياس والتقويم بسهولة، إذ يمكن ملاحظة تحققها في سلوك المتعلم والحكم عليها بموضوعية." },
+  { diff: "hard", q: "قارن بين المجالات الثلاثة للأهداف التعليمية (المعرفي، الوجداني، النفسحركي) من حيث: التعريف، المستويات، والتطبيق في التربية الخاصة.", hint: "استخدم مقارنة منظمة تشمل أوجه الشبه والاختلاف مع أمثلة تطبيقية.", model: "أولاً: المجال المعرفي — يتعامل مع العمليات العقلية كالتعرف واسترجاع المعلومات وتطبيقها وتحليلها. له ستة مستويات (التذكر، الفهم، التطبيق، التحليل، التركيب، التقويم). تطبيقه في التربية الخاصة: تعليم طالب الإعاقة الذهنية تسمية الألوان (تذكر)، أو حل مسائل حياتية بسيطة (تطبيق). ثانياً: المجال الوجداني — يتعامل مع العواطف والميول والاتجاهات والقيم. له خمسة مستويات بحسب كراثوهل. تطبيقه: تنمية الثقة بالنفس لدى طالب ذي إعاقة حركية، وتطوير اتجاه إيجابي نحو الاندماج الاجتماعي. ثالثاً: المجال النفسحركي — يتعامل مع المهارات الحركية التي تتطلب تآزراً حسياً وحركياً. له خمسة مستويات (المحاكاة، الممارسة، الأداء بدقة، الأداء المميز، الأداء الطبيعي). تطبيقه: تعليم طالب الشلل الدماغي مسك القلم (محاكاة) ثم الكتابة بدقة (أداء بدقة)." },
+  { diff: "hard", q: "ناقش المستويات المعيارية الستة للأهداف التعليمية موضحاً كيف تُطبق عند بناء منهج للتربية الخاصة.", hint: "فصّل كل معيار من المعايير الستة مع إبراز أهميته الخاصة لفئات ذوي الاحتياجات الخاصة.", model: "المعيار الأول — الاتساق: يجب أن تتسق أهداف منهج التربية الخاصة مع فلسفة التعليم الدامج ومتطلبات التشريعات الخاصة بالأفراد ذوي الإعاقة. المعيار الثاني — الشمول: تشمل الأهداف جميع جوانب النمو (المعرفي والوجداني والمهاري والاجتماعي) مع التأكيد على الاستقلالية والمهارات الحياتية. المعيار الثالث — الملاءمة: تكون الأهداف مناسبة للمستوى النمائي لكل طالب وفق خطته التعليمية الفردية (IEP) مراعيةً طبيعة إعاقته. المعيار الرابع — قابلية التحقق: تكون الأهداف واقعية يمكن تحقيقها وقياسها بأدوات ملاحظة وتقييم مناسبة للفئة المستهدفة. المعيار الخامس — الصدق: تعكس الأهداف احتياجات الطالب الفعلية في حاضره ومستقبله وتدعم هويته. المعيار السادس — التحديد: تكون الأهداف محددة وواضحة ومرنة بما يسمح بالتكيف حسب استجابة الطالب." },
+  { diff: "hard", q: "كيف يُسهم التدرج الهرمي للأهداف التعليمية في بناء منهج التربية الخاصة؟ وما العلاقة بين مستويات الأهداف المختلفة؟", hint: "اشرح كيف تؤدي الأهداف اليومية إلى تحقيق الغايات الكبرى مع تطبيق على طالب من ذوي الاحتياجات الخاصة.", model: "تتدرج الأهداف التعليمية في خط متصل يبدأ من الأهداف الإجرائية للأنشطة اليومية وينتهي بالغايات العامة للتربية. هذا التدرج يعني أن تحقيق أهداف الأنشطة اليومية يؤدي إلى تحقيق أهداف البرامج، وتحقيق أهداف البرامج يؤدي إلى تحقيق أهداف المنهج. تطبيقاً على التربية الخاصة: طالب ذو إعاقة ذهنية بسيطة — هدف يومي: أن يُرتّب الطالب ثلاثة أشياء حسب الحجم (تذكر وتطبيق). → هدف برنامج: إكساب الطالب مهارات التمييز والتصنيف. → هدف منهج: تأهيل الطالب للاستقلالية في بيئته. → غاية تربوية: الاندماج الاجتماعي وتحقيق حياة كريمة. هذا التسلسل يضمن أن كل نشاط يومي يُساهم في الأهداف الكبرى ولا يكون منفصلاً عن السياق العام." },
+  { diff: "hard", q: "قدّم نقداً تحليلياً لتصنيف بلوم ومدى تطبيقه في برامج التربية الخاصة، مع اقتراح أساليب لتكييفه.", hint: "انتقد نقاط القوة والضعف واقترح تعديلات تراعي احتياجات فئات الإعاقة المختلفة.", model: "نقاط قوة تصنيف بلوم في التربية الخاصة: يوفر إطاراً منظماً يساعد المعلم على تدرّج الأهداف من البسيط إلى المركب، ويُسهل قياس النواتج بموضوعية. كما يُساعد في بناء الخطط التعليمية الفردية (IEP). نقاط الضعف: لا يراعي التصنيف الأصلي الفروق الجوهرية بين فئات الإعاقة المختلفة. قد يكون التسلسل الهرمي جامداً لا يتوافق مع أنماط التعلم غير النمطية لدى بعض الفئات (كاضطراب طيف التوحد). التكييفات المقترحة: (1) تبسيط المستويات لتصبح ثلاثة مستويات عملية (إدراك، تطبيق، تعميم) لطلاب الإعاقة الذهنية. (2) التركيز على الأهداف الوظيفية الحياتية كأولوية. (3) دمج المجالات الثلاثة في أهداف متكاملة تعكس واقع الطالب المعاش. (4) مراعاة مستوى النضج والعمر الزمني بجانب العمر العقلي." }
+];
+
+// ===== RENDER FUNCTIONS =====
+let tfScores = new Array(tfData.length).fill(null);
+let mcqScores = new Array(mcqData.length).fill(null);
+
+function updateScore(arr, scoreEl, progEl) {
+  const correct = arr.filter(x => x === true).length;
+  const total = arr.length;
+  scoreEl.textContent = correct + ' / ' + total;
+  progEl.style.width = (correct / total * 100) + '%';
+}
+
+function renderTF() {
+  const c = document.getElementById('tf-container');
+  tfData.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'q-card';
+    div.innerHTML = `
+      <div class="q-header">
+        <div class="q-num" style="background:linear-gradient(135deg,#5B9BD4,#8E7CC3)">${i+1}</div>
+        <div class="q-text">${item.q}</div>
+      </div>
+      <div class="tf-row">
+        <button class="tf-btn" onclick="checkTF(${i}, true, this)">✓ صح</button>
+        <button class="tf-btn" onclick="checkTF(${i}, false, this)">✗ خطأ</button>
+      </div>
+      <div class="feedback" id="tf-fb-${i}"></div>
+    `;
+    c.appendChild(div);
+  });
+}
+
+function checkTF(i, chosen, btn) {
+  const card = btn.closest('.q-card');
+  const btns = card.querySelectorAll('.tf-btn');
+  btns.forEach(b => { b.disabled = true; b.classList.remove('sel'); });
+  btn.classList.add('sel');
+  const correct = tfData[i].ans;
+  const fb = document.getElementById('tf-fb-' + i);
+  if (chosen === correct) {
+    btn.classList.add('correct');
+    fb.className = 'feedback show ok';
+    fb.innerHTML = '✓ إجابة صحيحة!';
+    tfScores[i] = true;
+  } else {
+    btn.classList.add('wrong');
+    const correctBtn = chosen ? btns[1] : btns[0];
+    correctBtn.classList.add('show-correct');
+    fb.className = 'feedback show no';
+    fb.innerHTML = '✗ إجابة خاطئة. ' + (tfData[i].exp || 'الإجابة الصحيحة: ' + (correct ? 'صح' : 'خطأ'));
+    tfScores[i] = false;
+  }
+  updateScore(tfScores, document.getElementById('tf-score'), document.getElementById('tf-progress'));
+}
+
+function renderMCQ() {
+  const c = document.getElementById('mcq-container');
+  mcqData.forEach((item, i) => {
+    const optsHtml = item.opts.map((o, j) =>
+      `<button class="mcq-opt" onclick="checkMCQ(${i}, ${j}, this)">
+        <div class="mcq-bullet">${String.fromCharCode(0x0661 + j)}</div>
+        ${o}
+      </button>`
+    ).join('');
+    const div = document.createElement('div');
+    div.className = 'q-card';
+    div.innerHTML = `
+      <div class="q-header">
+        <div class="q-num" style="background:linear-gradient(135deg,#4EAD82,#5B9BD4)">${i+1}</div>
+        <div class="q-text">${item.q}</div>
+      </div>
+      <div class="mcq-options">${optsHtml}</div>
+      <div class="feedback" id="mcq-fb-${i}"></div>
+    `;
+    c.appendChild(div);
+  });
+}
+
+function checkMCQ(i, chosen, btn) {
+  const card = btn.closest('.q-card');
+  const opts = card.querySelectorAll('.mcq-opt');
+  opts.forEach(o => { o.style.pointerEvents = 'none'; o.classList.remove('sel'); });
+  btn.classList.add('sel');
+  const fb = document.getElementById('mcq-fb-' + i);
+  if (chosen === mcqData[i].ans) {
+    btn.classList.add('correct');
+    fb.className = 'feedback show ok';
+    fb.innerHTML = '✓ إجابة صحيحة!';
+    mcqScores[i] = true;
+  } else {
+    btn.classList.add('wrong');
+    opts[mcqData[i].ans].classList.add('show-correct');
+    fb.className = 'feedback show no';
+    fb.innerHTML = '✗ إجابة خاطئة. الإجابة الصحيحة: ' + mcqData[i].opts[mcqData[i].ans];
+    mcqScores[i] = false;
+  }
+  updateScore(mcqScores, document.getElementById('mcq-score'), document.getElementById('mcq-progress'));
+}
+
+function renderEssay() {
+  const c = document.getElementById('essay-container');
+  const diffMap = { easy: { label: 'سهل', cls: 'diff-easy' }, medium: { label: 'متوسط', cls: 'diff-med' }, hard: { label: 'صعب', cls: 'diff-hard' } };
+  essayData.forEach((item, i) => {
+    const d = diffMap[item.diff];
+    const div = document.createElement('div');
+    div.className = 'q-card';
+    div.innerHTML = `
+      <div class="q-header">
+        <div class="q-num" style="background:linear-gradient(135deg,#8E7CC3,#D47A70)">${i+1}</div>
+        <div>
+          <span class="essay-diff ${d.cls}">${d.label}</span>
+          <div class="essay-q-text">${item.q}</div>
+          <div class="essay-hint"><i class="ti ti-bulb"></i> تلميح: ${item.hint}</div>
+          <button class="model-btn" onclick="toggleModel(${i})">
+            <i class="ti ti-eye"></i> عرض الإجابة النموذجية
+          </button>
+          <div class="model-answer" id="essay-model-${i}">${item.model}</div>
+        </div>
+      </div>
+    `;
+    c.appendChild(div);
+  });
+}
+
+function toggleModel(i) {
+  const el = document.getElementById('essay-model-' + i);
+  el.classList.toggle('show');
+  const btn = el.previousElementSibling;
+  if (el.classList.contains('show')) {
+    btn.innerHTML = '<i class="ti ti-eye-off"></i> إخفاء الإجابة';
+  } else {
+    btn.innerHTML = '<i class="ti ti-eye"></i> عرض الإجابة النموذجية';
+  }
+}
+
+// Init
+renderTF();
+renderMCQ();
+renderEssay();
+</script>
+</body>
+</html>
